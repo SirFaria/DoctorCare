@@ -5,3 +5,7 @@ function onScroll() {
     navigation.classList.remove("scroll");
   }
 }
+
+function toggleMenu() {
+  document.body.classList.toggle("menu-expanded");
+}
