@@ -29,6 +29,8 @@ body {
 }
 
 body {
+  background: var(--primary-light-02);
+
   font-family: "DM Sans";
   font-size: 1.6rem;
 
@@ -39,6 +41,10 @@ body {
 
 ul {
   list-style: none;
+}
+
+section {
+  padding-block: 10rem;
 }
 
 .wrapper {
@@ -163,7 +169,6 @@ body.menu-expanded .logo path {
   fill: var(--secondary-white);
 }
 
-body.menu-expanded .toggle-menu,
 body.menu-expanded .toggle-menu::after,
 body.menu-expanded .toggle-menu::before {
   background: var(--secondary-white);
@@ -337,4 +342,47 @@ header .stat p {
 
   margin: 0;
   line-height: 150%;
+}
+
+/* ============ Services ============================== */
+
+#services header h4 {
+  color: var(--primary);
+
+  margin-bottom: 1.6rem;
+
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+#services header h2 {
+  color: var(--secondary-headline);
+
+  margin-bottom: 6rem;
+
+  font-size: 3rem;
+  line-height: 3.9rem;
+}
+
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#services .card {
+  background: var(--secondary-white);
+
+  border: 1px solid var(--primary-light-01);
+  border-radius: 0.6rem;
+
+  padding: 2.4rem;
+
+  text-align: left;
+}
+
+#services .card h3 {
+  margin-block: 1.6rem;
 }
