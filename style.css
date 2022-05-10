@@ -66,10 +66,9 @@ nav {
 
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
   z-index: 100;
+
+  width: 100vw;
 }
 
 nav .wrapper {
@@ -80,10 +79,9 @@ nav .wrapper {
 
 nav.scroll {
   background: var(--primary);
-  width: 100vw;
 }
 
-nav.scroll svg:nth-child(1) path {
+nav.scroll .logo path {
   fill: var(--secondary-white);
 }
 
@@ -146,11 +144,7 @@ body.menu-expanded {
 }
 
 body.menu-expanded > :not(nav) {
-  display: none;
-}
-
-body.menu-expanded nav {
-  position: relative;
+  visibility: hidden;
 }
 
 body.menu-expanded .logo,
