@@ -147,11 +147,6 @@ body.menu-expanded > :not(nav) {
   display: none;
 }
 
-.menu {
-  opacity: 0;
-  visibility: hidden;
-}
-
 body.menu-expanded nav {
   position: relative;
 }
@@ -199,6 +194,15 @@ body.menu-expanded .menu {
 
   opacity: 1;
   visibility: visible;
+
+  transition: transform 300ms;
+  transform: translateX(0);
+}
+
+.menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
 }
 
 .page-links {
