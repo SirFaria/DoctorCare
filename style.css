@@ -22,6 +22,10 @@
   font-size: 62.5%; /* 1rem = 10px */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   width: 100%;
@@ -260,8 +264,8 @@ header::before {
   z-index: -99;
 }
 
-header {
-  margin-top: calc(4.1rem + var(--nav-height));
+header#home {
+  padding-top: calc(4.1rem + var(--nav-height));
 }
 
 header h1 {
