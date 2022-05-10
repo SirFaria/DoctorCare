@@ -75,14 +75,57 @@ nav.scroll svg:nth-child(1) path {
   fill: var(--secondary-white);
 }
 
-nav.scroll button path {
-  stroke: var(--secondary-white);
+nav.scroll .toggle-menu,
+nav.scroll .toggle-menu::after,
+nav.scroll .toggle-menu::before {
+  background: var(--secondary-white);
 }
 
 nav button {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+nav .button-menu {
+  width: 2.8rem;
+  height: 2.8rem;
+  padding: 0.5rem;
+}
+
+nav .toggle-menu,
+.toggle-menu::before,
+.toggle-menu::after {
+  background: var(--primary);
+
+  display: block;
+
+  width: 18px;
+  height: 2px;
+
+  outline: 1px solid transparent;
+
+  transition-property: background-color, transform;
+  transition-duration: 300ms;
+}
+
+.toggle-menu {
+  position: relative;
+  user-select: none;
+}
+
+.toggle-menu::before,
+.toggle-menu::after {
+  position: absolute;
+  content: "";
+}
+
+.toggle-menu::before {
+  top: -0.6rem;
+}
+
+.toggle-menu::after {
+  top: 0.6rem;
 }
 
 /* ============ Menu-Expanded ============================== */
@@ -94,15 +137,12 @@ body.menu-expanded > :not(nav) {
   display: none;
 }
 
-.menu,
-.close-menu,
-body.menu-expanded .open-menu {
+.menu {
   opacity: 0;
   visibility: hidden;
 }
 
-body.menu-expanded .menu,
-body.menu-expanded .close-menu {
+body.menu-expanded .menu {
   opacity: 1;
   visibility: visible;
 }
@@ -112,8 +152,10 @@ body.menu-expanded nav {
 }
 
 body.menu-expanded .logo,
-body.menu-expanded .close-menu {
-  position: relative;
+body.menu-expanded .button-menu,
+body.menu-expanded .toggle-menu,
+body.menu-expanded .toggle-menu::after,
+body.menu-expanded .toggle-menu::before {
   z-index: 100;
 }
 
@@ -121,8 +163,22 @@ body.menu-expanded .logo path {
   fill: var(--secondary-white);
 }
 
-body.menu-expanded .close-menu path {
-  stroke: var(--secondary-white);
+body.menu-expanded .toggle-menu,
+body.menu-expanded .toggle-menu::after,
+body.menu-expanded .toggle-menu::before {
+  background: var(--secondary-white);
+}
+
+body.menu-expanded .toggle-menu {
+  background: transparent;
+}
+
+body.menu-expanded .toggle-menu::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+body.menu-expanded .toggle-menu::after {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 body.menu-expanded .menu {
