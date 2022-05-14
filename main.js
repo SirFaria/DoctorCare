@@ -1,4 +1,8 @@
 function onScroll() {
+  showNavOnScroll();
+}
+
+function showNavOnScroll() {
   if (scrollY > 0) {
     navigation.classList.add("scroll");
   } else {
