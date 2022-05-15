@@ -118,7 +118,7 @@ section .content p {
 
 /* ============ Navigation ============================== */
 
-nav {
+#navigation {
   display: flex;
 
   height: var(--nav-height);
@@ -130,39 +130,43 @@ nav {
   width: 100vw;
 }
 
-nav .wrapper {
+#navigation .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-nav.scroll {
+#navigation .logo path[fill*="#00856F"] {
+  fill: var(--primary);
+}
+
+#navigation.scroll {
   background: var(--primary);
 }
 
-nav.scroll .logo path {
+#navigation.scroll .logo path {
   fill: var(--secondary-white);
 }
 
-nav.scroll .toggle-menu,
-nav.scroll .toggle-menu::after,
-nav.scroll .toggle-menu::before {
+#navigation.scroll .toggle-menu,
+#navigation.scroll .toggle-menu::after,
+#navigation.scroll .toggle-menu::before {
   background: var(--secondary-white);
 }
 
-nav button {
+#navigation button {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-nav .button-menu {
+#navigation .button-menu {
   width: 2.8rem;
   height: 2.8rem;
   padding: 0.5rem;
 }
 
-nav .toggle-menu,
+#navigation .toggle-menu,
 .toggle-menu::before,
 .toggle-menu::after {
   background: var(--primary);
@@ -214,7 +218,7 @@ body.menu-expanded .toggle-menu::before {
   z-index: 100;
 }
 
-body.menu-expanded .logo path {
+body.menu-expanded #navigation .logo path {
   fill: var(--secondary-white);
 }
 
@@ -409,6 +413,14 @@ body.menu-expanded .menu {
   font-size: 2.4rem;
 }
 
+#services .card circle {
+  fill: var(--primary-light-01);
+}
+
+#services .card path {
+  stroke: var(--primary);
+}
+
 /* ============ About ============================== */
 
 #about {
@@ -447,6 +459,10 @@ body.menu-expanded .menu {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+}
+
+#contact li path {
+  stroke: var(--primary);
 }
 
 /* ============ Footer ============================== */
@@ -501,4 +517,8 @@ footer .social-links {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
+}
+
+#backToTopButton circle {
+  fill: var(--primary);
 }
