@@ -17,7 +17,7 @@
   <body>
     <nav id="navigation">
       <div class="wrapper">
-        <a class="logo" href="#home">
+        <a class="logo" href="#home" onclick="closeMenu()">
           <svg
             width="133"
             height="18"
@@ -70,12 +70,14 @@
 
         <div class="menu">
           <ul class="page-links">
-            <li><a href="#home" onclick="toggleMenu()">Início</a></li>
-            <li><a href="#services" onclick="toggleMenu()">Serviços</a></li>
-            <li><a href="#about" onclick="toggleMenu()">Sobre</a></li>
+            <li><a href="#home" onclick="closeMenu()">Início</a></li>
+            <li><a href="#services" onclick="closeMenu()">Serviços</a></li>
+            <li><a href="#about" onclick="closeMenu()">Sobre</a></li>
           </ul>
 
-          <a href="#contact" class="button">Agende sua consulta</a>
+          <a href="#contact" class="button" onclick="closeMenu()"
+            >Agende sua consulta</a
+          >
 
           <ul class="social-links">
             <li>
