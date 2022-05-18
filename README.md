@@ -1,4 +1,4 @@
-<h1 align="center">Doctor Care</h1>
+<h1 align="center">DoctorCare</h1>
 
 <h1 align="center">
     <img alt="DoctorCare Homepage" title="DoctorCare Homepage" src="./assets/doctorcare-homepage.png" width="700px"  />
